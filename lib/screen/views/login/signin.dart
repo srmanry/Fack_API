@@ -8,7 +8,7 @@ class SignInscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("SIGN IN"),
+        title: const Text("SIGN IN"),
       ),
     );
   }
