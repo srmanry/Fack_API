@@ -14,94 +14,106 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              SizedBox(
-                height: 150.h,
-              ),
-              SizedBox(
-                height: 50.h,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  hintText: "Email",
+        child: ListView(
+          children: [
+            SizedBox(
+              height: 0.h,
+            ),
+            const Text(
+              "Wellcome Back\n Fack Api",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 150.h,
+            ),
+            Text(
+              "Email",
+              style: TextStyle(fontSize: 16.sp),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
                 ),
+                hintText: "Email",
               ),
-              const SizedBox(
-                height: 10.0,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  hintText: "Password",
+            ),
+            const SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              "Password",
+              style: TextStyle(fontSize: 16.sp),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
                 ),
+                hintText: "Password",
               ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              InkWell(
-                onTap: () {
-                  Get.to(const TabbarScrren());
-                },
-                child: Container(
-                  height: 45.h,
-                  width: 150.w,
-                  decoration: BoxDecoration(
-                    color: Colors.teal,
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: const [
-                      BoxShadow(
-                        blurRadius: 10,
-                        //color: Colors.red,
-                      ),
-                    ],
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Login",
-                      style: bottomtextstyle,
-                    ),
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Forget password? ",
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 20.h,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Forget password",
+                InkWell(
+                  onTap: () {
+                    Get.to(const SignInscreen());
+                  },
+                  child: Text(
+                    'Register',
                     style: TextStyle(
-                      color: Colors.red,
-                      fontSize: 18.sp,
+                      color: Colors.teal,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  InkWell(
-                    onTap: () {
-                      Get.to(const SignInscreen());
-                    },
-                    child: Text(
-                      'Register',
-                      style: TextStyle(
-                        color: Colors.teal,
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  )
-                ],
-              )
-            ],
-          ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            InkWell(
+              onTap: () {
+                Get.to(const TabbarScrren());
+              },
+              child: Container(
+                height: 45.h,
+                width: 150.w,
+                decoration: BoxDecoration(
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: const [
+                    BoxShadow(
+                        // blurRadius: 10,
+                        //color: Colors.red,
+                        ),
+                  ],
+                ),
+                child: Center(
+                  child: Text(
+                    "Login",
+                    style: bottomtextstyle,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
+          ],
         ),
       ),
     );

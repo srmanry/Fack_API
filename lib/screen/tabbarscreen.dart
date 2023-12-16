@@ -16,6 +16,7 @@ class TabbarScrren extends StatelessWidget {
       child: Scaffold(
         drawer: const customDrawer(),
         appBar: AppBar(
+          backgroundColor: Colors.teal,
           actions: [
             InkWell(
                 onTap: () {
@@ -27,11 +28,16 @@ class TabbarScrren extends StatelessWidget {
                 ))
           ],
           centerTitle: true,
-          title: const Text("Fack API"),
+          title: const Text(
+            "Fack API",
+            style: TextStyle(color: Colors.white),
+          ),
           bottom: const TabBar(
-            indicatorColor: Colors.amber,
+            indicatorColor: Colors.white,
+            labelColor: Colors.white,
             unselectedLabelColor: Colors.white,
-            labelColor: Colors.red,
+
+            /// labelColor: Colors.red,
             // splashBorderRadius: BorderRadius.all(
 
             //   Radius.circular(5)),
@@ -41,9 +47,10 @@ class TabbarScrren extends StatelessWidget {
             labelStyle: TextStyle(
               fontSize: 18,
             ),
-            indicator: BoxDecoration(
-                color: Colors.amber,
-                borderRadius: BorderRadius.all(Radius.circular(10))),
+            // indicator: Colors.white,
+            // indicator: BoxDecoration(
+            //     color: Colors.amber,
+            //     borderRadius: BorderRadius.all(Radius.circular(10))),
             tabs: [
               Tab(
                 text: 'User',
